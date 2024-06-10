@@ -1,0 +1,680 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\author{{\LARGE Prof. Dr.-Ing. Carsten Schulz, Prof. Dr.-Ing. Florian Nützel}}
+\title{\textbf{{\Huge KO2 Verlaufsprotokoll}}}
+\date{{\Large \today}}
+\usepackage{hyperref}
+
+
+\begin{document}
+\maketitle
+\begin{center}
+
+    \Large KON2: Konstruktives Entwurfsprojekt
+
+    \vspace{1cm}
+
+    \textbf{\textit{Entwicklung eines Treppenlifters für Rollstühle}}
+
+    \vspace{1cm}
+
+    {\Large Gruppe 11}
+\end{center}
+
+\begin{table}[b]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Teilnehmer} & \textbf{Matrikelnummer} \\
+        \hline
+        Janis Graf          &                         \\
+        \hline
+        Raoul Pietschmann   &                         \\
+        \hline
+        Phillipp Baumann    &                         \\
+        \hline
+        Jonas Frosch        & 3333813                 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Aufgabenstellung}
+\subsection{Meeting Protokoll}
+\section{Anforderungsliste}
+\subsection{Meeting Protokoll}
+\section{Patent Research}
+\subsection{Meeting Protokoll}
+\section{Funktionsstruktur}
+\subsection{Grad N und N-1}
+\subsection{Grad N-2}
+\subsection{Meeting Protokoll}
+\section{Wirkprinzipien}
+\subsection{Morphologischer Kasten}
+\subsection{Gewählte Lösungen}
+\subsection{Meeting Protokoll}
+\section{Technische Bewertung}
+\subsection{Argumentenbilanz}
+\subsection{Punktebewertung}
+% A Befestigung des Rollstuhls an Mechanismus
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{2.5cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        A      & \multicolumn{9}{c}{Befestigung des Rollstuhls an Mechanismus}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                                     & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                                       & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Schraubenverbindung                                           & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 3.25 \\
+        \midrule
+        2      & Bolzenverbindung                                              & gew. Punkte & 1      & 0.45                   & 0.4             & 0.6             & 0.3              & 0.2          & 0.05  & 3    \\
+        \midrule
+        3      & Schraubenverbindung                                           & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 3.25 \\
+        \midrule
+        Ideal  &                                                               & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{A Befestigung des Rollstuhls an Mechanismus}
+\end{table}
+%B Befestigung an der Treppe
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{2.5cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        B      & \multicolumn{9}{c}{Befestigung an Treppe}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                 & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                   & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Keine Befestigung an Treppe               & gew. Punkte & 1      & 0.6                    & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 3.5  \\
+        \midrule
+        2      & Befestigung an Treppendecke               & gew. Punkte & 0.75   & 0.45                   & 0.4             & 0.45            & 0.2              & 0.2          & 0.05  & 2.5  \\
+        \midrule
+        3      & Saugnäpfe                                 & gew. Punkte & 0.75   & 0.45                   & 0.4             & 0.45            & 0.3              & 0.1          & 0.1   & 2.55 \\
+        \midrule
+        Ideal  &                                           & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Befestigungslösungen an der Treppe}
+\end{table}
+%C Antrieb
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{2.5cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        C      & \multicolumn{9}{c}{Antrieb}                                                                                                                                      \\
+        \midrule
+               & Kriterium                   & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                     & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Elektromotor                & gew. Punkte & 1      & 0.6                    & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 3.5  \\
+        \midrule
+        2      & Elektromotor                & gew. Punkte & 1      & 0.6                    & 0.4             & 0.45            & 0.2              & 0.2          & 0.05  & 2.9  \\
+        \midrule
+        3      & Hydraulik                   & gew. Punkte & 0.75   & 0.45                   & 0.4             & 0.45            & 0.3              & 0.1          & 0.1   & 2.55 \\
+        \midrule
+        Ideal  &                             & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Antriebslösungen}
+\end{table}
+%D Energiequelle
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{2.5cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        D      & \multicolumn{9}{c}{Energiequelle}                                                                                                                                      \\
+        \midrule
+               & Kriterium                         & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                           & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Elektrisch                        & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.45            & 0.3              & 0.4          & 0.15  & 3.25 \\
+        \midrule
+        2      & Elektrisch                        & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.45            & 0.3              & 0.4          & 0.15  & 3.25 \\
+        \midrule
+        3      & Elektrisch                        & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.45            & 0.3              & 0.4          & 0.15  & 3.25 \\
+        \midrule
+        Ideal  &                                   & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Energiequellenlösungen}
+\end{table}
+%E Energieübertragung
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{2.5cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        E      & \multicolumn{9}{c}{Energieübertragung}                                                                                                                                      \\
+        \midrule
+               & Kriterium                              & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Riemenantrieb                          & gew. Punkte & 0.75   & 0.45                   & 0.4             & 0.6             & 0.2              & 0.3          & 0.1   & 2.8  \\
+        \midrule
+        2      & Welle-Nabe                             & gew. Punkte & 0.5    & 0.6                    & 0.4             & 0.45            & 0.3              & 0.3          & 0.05  & 2.6  \\
+        \midrule
+        3      & Zahnrad                                & gew. Punkte & 0.5    & 0.45                   & 0.4             & 0.45            & 0.3              & 0.3          & 0.1   & 2.5  \\
+        \midrule
+        Ideal  &                                        & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Energieübertragungslösungen}
+\end{table}
+%F Transport zusätzlicher Objekte
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{2.5cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        F      & \multicolumn{9}{c}{Transport zusätzlicher Objekte}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                          & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                            & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Korb                                               & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.45            & 0.3              & 0.4          & 0.1   & 3.2  \\
+        \midrule
+        2      & Korb                                               & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.45            & 0.3              & 0.4          & 0.1   & 3.2  \\
+        \midrule
+        3      & Korb                                               & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.45            & 0.3              & 0.4          & 0.1   & 3.2  \\
+        \midrule
+        Ideal  &                                                    & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Transportlösungen zusätzlicher Objekte}
+\end{table}
+%G Energierückgewinnung
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{3cm} p{5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        G      & \multicolumn{9}{c}{Energierückgewinnung}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                  & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Dynamo                                   & gew. Punkte & 1      & 0.6                    & 0.8             & 0.6             & 0.3              & 0.3          & 0.1   & 3.7  \\
+        \midrule
+        2      & Regeneratives Bremssystem                & gew. Punkte & 0.5    & 0.15                   & 0.4             & 0.45            & 0.1              & 0.4          & 0.05  & 2.05 \\
+        \midrule
+        3      & Dynamo                                   & gew. Punkte & 1      & 0.45                   & 0.8             & 0.6             & 0.3              & 0.3          & 0.1   & 3.55 \\
+        \midrule
+        Ideal  &                                          & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Energierückgewinnung}
+\end{table}
+% H Steuerung/Steuerungseinheit
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{3cm} p{5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        H      & \multicolumn{9}{c}{Steuerung/Steuerungseinheit}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                       & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                         & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Handsteuerung                                   & gew. Punkte & 0.75   & 0.45                   & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 3.1  \\
+        \midrule
+        2      & Handsteuerung                                   & gew. Punkte & 0.75   & 0.45                   & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 3.1  \\
+        \midrule
+        3      & Handsteuerung                                   & gew. Punkte & 0.75   & 0.45                   & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 3.1  \\
+        \midrule
+        Ideal  &                                                 & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Steuerung/Steuerungseinheit}
+\end{table}
+%K Zusätzliche Anwenudngsmöglichkeiten
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{3cm} p{5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        K      & \multicolumn{9}{c}{Zusätzliche Anwendungsmöglichkeiten}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                               & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                                 & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Rettungsdienstkonformität                               & gew. Punkte & 0.75   & 0.45                   & 0.6             & 0.6             & 0.3              & 0.3          & 0.05  & 3.05 \\
+        \midrule
+        2      & Rettungsdienstkonformität                               & gew. Punkte & 0.75   & 0.3                    & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 2.95 \\
+        \midrule
+        3      & Rettungsdienstkonformität                               & gew. Punkte & 0.75   & 0.3                    & 0.6             & 0.6             & 0.3              & 0.3          & 0.1   & 2.95 \\
+        \midrule
+        Ideal  &                                                         & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der zusätzlichen Anwendungsmöglichkeiten}
+\end{table}
+%J Sicherheitseinrichtungen
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{3cm} p{5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        J      & \multicolumn{9}{c}{Sicherheitseinrichtungen}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                    & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                      & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Auditives Warnsignal                         & gew. Punkte & 1      & 0.45                   & 0.4             & 0.6             & 0.2              & 0.3          & 0.1   & 3.05 \\
+        \midrule
+        2      & Auditives Warnsignal                         & gew. Punkte & 1      & 0.45                   & 0.4             & 0.6             & 0.2              & 0.3          & 0.1   & 3.05 \\
+        \midrule
+        3      & Warnblinker                                  & gew. Punkte & 0.75   & 0.6                    & 0.6             & 0.3             & 0.3              & 0.3          & 0.1   & 2.95 \\
+        \midrule
+        Ideal  &                                              & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Sicherheitseinrichtungen}
+\end{table}
+% L Kraftübertragubg auf der Treppe
+\begin{table}[h]
+    \centering
+    \begin{tabular}{>{\bfseries}p{3cm} p{5cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+        \toprule
+        L      & \multicolumn{9}{c}{Kraftübertragung Antrieb auf Treppe}                                                                                                                                      \\
+        \midrule
+               & Kriterium                                               & Sicherheit  & Kosten & Benutzerfreundlichkeit & Zuverlässigkeit & Wartungsaufwand & Energieeffizienz & Flexibilität & Summe        \\
+        \midrule
+        Lösung & Element                                                 & Gewichtung  & 0.25   & 0.15                   & 0.20            & 0.15            & 0.10             & 0.10         & 0.05  & 1.00 \\
+        \midrule
+        1      & Raupen/Ketten                                           & gew. Punkte & 0.75   & 0.3                    & 0.6             & 0.6             & 0.3              & 0.3          & 0.15  & 3    \\
+        \midrule
+        2      & Zahnradschiene                                          & gew. Punkte & 0.75   & 0.45                   & 0.4             & 0.45            & 0.2              & 0.2          & 0.05  & 2.5  \\
+        \midrule
+        3      & Radstern                                                & gew. Punkte & 0.5    & 0.6                    & 0.4             & 0.6             & 0.4              & 0.3          & 0.2   & 2.5  \\
+        \midrule
+        Ideal  &                                                         & 1           & 0.6    & 0.8                    & 0.6             & 0.4             & 0.4              & 0.2          & 4            \\
+        \bottomrule
+    \end{tabular}
+    \caption{Bewertung der Kraftübertragung des Antriebs auf die Treppe}
+\end{table}
+
+\subsection{Wirtschaftliche Bewertung}
+\subsubsection{Funktionen}
+
+\begin{table}[h!]
+    \centering
+    \hspace*{-0.14in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2.5cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium          & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung         & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1 Verschraubung    & 3              & 3                     & 3                     & 3              &       &                            \\
+                           & 0,6            & 0,75                  & 1,65                  & 0,3            & 3,3   & 0,75                       \\
+        \midrule
+        2 Verschraubung    & 3              & 3                     & 3                     & 3              &       &                            \\
+                           & 0,6            & 0,75                  & 1,65                  & 0,3            & 3,3   & 0,75                       \\
+        \midrule
+        3 Bolzenverbindung & 4              & 4                     & 4                     & 4              &       &                            \\
+                           & 0,8            & 1                     & 2,2                   & 0,4            & 4,4   & 1                          \\
+        \midrule
+        Ideal              & 4              & 4                     & 4                     & 4              & 4,4   & 1                          \\
+        \bottomrule
+    \end{tabular}
+    \caption{A Befestigung des Rollstuhls an Mechanismus}
+\end{table}
+%B Befestigung an Treppe
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 4              & 3                     & 3                     & 3              &       &                            \\
+                   & 0,8            & 0,75                  & 1,65                  & 0,3            & 3,5   & 0,795                      \\
+        \midrule
+        2          & 4              & 3                     & 3                     & 3              &       &                            \\
+                   & 0,8            & 0,75                  & 1,65                  & 0,3            & 3,5   & 0,795                      \\
+        \midrule
+        3          & 2              & 1                     & 3                     & 2              &       &                            \\
+                   & 0,4            & 0,25                  & 1,65                  & 0,2            & 2,5   & 0,568                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 2,159                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{B Befestigung an Treppe}
+\end{table}
+
+%C Antrieb
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 3              & 2                     & 3                     & 2              &       &                            \\
+                   & 0,6            & 0,5                   & 1,65                  & 0,2            & 2,95  & 0,670                      \\
+        \midrule
+        2          & 2              & 3                     & 2                     & 3              &       &                            \\
+                   & 0,4            & 0,75                  & 1,1                   & 0,3            & 2,55  & 0,580                      \\
+        \midrule
+        3          & 2              & 3                     & 2                     & 3              &       &                            \\
+                   & 0,4            & 0,75                  & 1,1                   & 0,3            & 2,55  & 0,580                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 1,830                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{C Antrieb}
+\end{table}
+
+% D Energiequelle
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 1,00           & 0,00                  & 0,00                  & 0,00           & 1,00  &                            \\
+        \midrule
+        1          & 3              & 4                     & 4                     & 4              &       &                            \\
+                   & 3              & 0                     & 0                     & 0              & 3     & 0,75                       \\
+        \midrule
+        2          & 3              & 4                     & 4                     & 4              &       &                            \\
+                   & 3              & 0                     & 0                     & 0              & 3     & 0,75                       \\
+        \midrule
+        3          & 3              & 4                     & 4                     & 4              &       &                            \\
+                   & 3              & 0                     & 0                     & 0              & 3     & 0,75                       \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4     & 2,25                       \\
+        \bottomrule
+    \end{tabular}
+    \caption{D Energiequelle}
+\end{table}
+%E Energieübertragung
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 4              & 4                     & 3                     & 1              &       &                            \\
+                   & 0,8            & 1                     & 1,65                  & 0,1            & 3,55  & 0,807                      \\
+        \midrule
+        2          & 4              & 3                     & 2                     & 1              &       &                            \\
+                   & 0,8            & 0,75                  & 1,1                   & 0,1            & 2,75  & 0,625                      \\
+        \midrule
+        3          & 2              & 2                     & 2                     & 1              &       &                            \\
+                   & 0,4            & 0,5                   & 1,1                   & 0,1            & 2,1   & 0,477                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 1,909                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{E Energieübertragung}
+\end{table}
+%F Transport zusätzlicher objekte
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 3              & 3                     & 3                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,3            & 3,3   & 0,75                       \\
+        \midrule
+        2          & 3              & 3                     & 3                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,3            & 3,3   & 0,75                       \\
+        \midrule
+        3          & 3              & 3                     & 3                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,3            & 3,3   & 0,75                       \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 2,25                       \\
+        \bottomrule
+    \end{tabular}
+    \caption{F Transport zusätzlicher Objekte}
+\end{table}
+%G Energierückgewinnung
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 3              & 3                     & 3                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,3            & 3,3   & 0,750                      \\
+        \midrule
+        2          & 1              & 2                     & 2                     & 3              &       &                            \\
+                   & 0,2            & 0,5                   & 1,1                   & 0,3            & 2,1   & 0,477                      \\
+        \midrule
+        3          & 3              & 3                     & 3                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,3            & 3,3   & 0,750                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 1,977                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{G Energierückgewinnung}
+\end{table}
+%H Steuerungeeinheiten
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 3              & 2                     & 2                     & 3              &       &                            \\
+                   & 0,6            & 0,5                   & 1,1                   & 0,3            & 2,5   & 0,568                      \\
+        \midrule
+        2          & 3              & 2                     & 2                     & 3              &       &                            \\
+                   & 0,6            & 0,5                   & 1,1                   & 0,3            & 2,5   & 0,568                      \\
+        \midrule
+        3          & 3              & 2                     & 2                     & 3              &       &                            \\
+                   & 0,6            & 0,5                   & 1,1                   & 0,3            & 2,5   & 0,568                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 1,705                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{H Steuerung/Steuerungseinheit}
+\end{table}
+%I Redundanzen
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 3              & 3                     & 2                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,1                   & 0,3            & 2,75  & 0,625                      \\
+        \midrule
+        2          & 3              & 3                     & 2                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,1                   & 0,3            & 2,75  & 0,625                      \\
+        \midrule
+        3          & 3              & 3                     & 2                     & 3              &       &                            \\
+                   & 0,6            & 0,75                  & 1,1                   & 0,3            & 2,75  & 0,625                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 1,875                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{I Redundanzen}
+\end{table}
+% J Sicherheitseinrichtugne
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 3              & 3                     & 3                     & 4              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,4            & 3,4   & 0,773                      \\
+        \midrule
+        2          & 3              & 3                     & 3                     & 4              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,4            & 3,4   & 0,773                      \\
+        \midrule
+        3          & 3              & 3                     & 3                     & 4              &       &                            \\
+                   & 0,6            & 0,75                  & 1,65                  & 0,4            & 3,4   & 0,773                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 2,318                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{J Sicherheitseinrichtungen}
+\end{table}
+%K Zusätzliche Anwendungsmöglichkeiten
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 3              & 3                     & 2                     & 2              &       &                            \\
+                   & 0,6            & 0,75                  & 1,1                   & 0,2            & 2,65  & 0,602                      \\
+        \midrule
+        2          & 3              & 3                     & 2                     & 2              &       &                            \\
+                   & 0,6            & 0,75                  & 1,1                   & 0,2            & 2,65  & 0,602                      \\
+        \midrule
+        3          & 3              & 3                     & 2                     & 2              &       &                            \\
+                   & 0,6            & 0,75                  & 1,1                   & 0,2            & 2,65  & 0,602                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 1,807                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{K Zusätzliche Anwendungsmöglichkeiten}
+\end{table}
+%J Kraftübertragung
+\begin{table}[h!]
+    \centering
+    \hspace*{0in} % Verschiebt die Tabelle weiter nach links
+    \begin{tabular}{>{\bfseries}p{2cm} p{2.2cm} p{2cm} p{2cm} p{2.5cm} p{2cm} p{2cm}}
+        \toprule
+        Kriterium  & Materialkosten & Fertigung Einzelteile & Fertigung Zusammenbau & Wartungskosten & Summe & Wirtschaftliche Wertigkeit \\
+        \midrule
+        Gewichtung & 0,20           & 0,25                  & 0,55                  & 0,10           & 1,10  &                            \\
+        \midrule
+        1          & 2              & 2                     & 1                     & 3              &       &                            \\
+                   & 0,2            & 0,25                  & 0,55                  & 0,4            & 1,4   & 0,318                      \\
+        \midrule
+        2          & 1              & 1                     & 1                     & 4              &       &                            \\
+                   & 0,2            & 0,25                  & 0,55                  & 0,4            & 1,4   & 0,318                      \\
+        \midrule
+        3          & 2              & 2                     & 2                     & 1              &       &                            \\
+                   & 0,4            & 0,5                   & 1,1                   & 0,1            & 2,1   & 0,477                      \\
+        \midrule
+        Ideal      & 4              & 4                     & 4                     & 4              & 4,4   & 1,114                      \\
+        \bottomrule
+    \end{tabular}
+    \caption{J Kraftübertragung auf Treppe}
+\end{table}
+
+\clearpage
+
+\subsubsection{Ergebnis}
+
+\hspace*{-0.41in} % Verschiebt die Tabelle weiter nach links
+\begin{tabular}{>{\bfseries}p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm}}
+    \toprule
+    Funktion                       & Prozent        & Optimale Lösung & Wertigkeit      & L1     & L1-Nomiert      & L2     & L2-Nomiert      & L3     & L3-Nomiert      \\
+    \midrule
+    A                              & 0,01           & 4               & 0,0400          & 0,7500 & 0,0075          & 0,7500 & 0,0075          & 1,0000 & 0,0100          \\
+    B                              & 0,1            & 4               & 0,4000          & 0,7955 & 0,0795          & 0,7955 & 0,0795          & 0,5682 & 0,0568          \\
+    C                              & 0,2            & 4               & 0,8000          & 0,6705 & 0,1341          & 0,5795 & 0,1159          & 0,5795 & 0,1159          \\
+    D                              & 0,02           & 4               & 0,0800          & 0,7500 & 0,0150          & 0,7500 & 0,0150          & 0,7500 & 0,0150          \\
+    E                              & 0,05           & 4               & 0,2000          & 0,8068 & 0,0403          & 0,6250 & 0,0313          & 0,4773 & 0,0239          \\
+    F                              & 0,06           & 4               & 0,2400          & 0,7500 & 0,0450          & 0,7500 & 0,0450          & 0,7500 & 0,0450          \\
+    G                              & 0,05           & 4               & 0,2000          & 0,7500 & 0,0375          & 0,4773 & 0,0239          & 0,7500 & 0,0375          \\
+    H                              & 0,2            & 4               & 0,8000          & 0,5682 & 0,1136          & 0,5682 & 0,1136          & 0,5682 & 0,1136          \\
+    I                              & 0,05           & 4               & 0,2000          & 0,6250 & 0,0313          & 0,6250 & 0,0313          & 0,6250 & 0,0313          \\
+    J                              & 0,01           & 4               & 0,0400          & 0,7727 & 0,0077          & 0,7727 & 0,0077          & 0,7727 & 0,0077          \\
+    K                              & 0,05           & 4               & 0,2000          & 0,6023 & 0,0301          & 0,6023 & 0,0301          & 0,6023 & 0,0301          \\
+    L                              & 0,2            & 4               & 0,8000          & 0,3182 & 0,0636          & 0,3182 & 0,0636          & 0,4773 & 0,0955          \\
+    M                              & 0              & 4               & 0,0000          & 0,0000 & 0,0000          & 0,0000 & 0,0000          & 0,0000 & 0,0000          \\
+    \midrule
+    \textbf{Absolute Wertigkeit}   & \textbf{100\%} &                 & \textbf{4,0000} &        & \textbf{0,6053} &        & \textbf{0,5644} &        & \textbf{0,5823} \\
+    \textbf{Prozentuale Erfüllung} &                &                 & \textbf{100\%}  &        & \textbf{61\%}   &        & \textbf{56\%}   &        & \textbf{58\%}   \\
+    \bottomrule
+\end{tabular}
+
+\subsection{Stärke-Schwächen-Diagramm}
+\subsection{Meeting Protokoll}
+\newpage
+\section{Finale Lösungen}
+
+\subsection{CAD-Modell Stairmaster 3000: Rollstuhlfaher Edition}
+\subsubsection{Vorgehen}
+Die Vorgehensweise wurde zu Beginn durch eine gründliche Ausarbeitung festgelegt. Der morphologische Kasten mit seinen Lösungsvorschlägen fungierte dabei als Ausgangspunkt für die CAD-Entwicklung. Nachdem die grundlegenden Merkmale des Geräts im morphologischen Kasten definiert worden waren, erfolgte die schrittweise Umsetzung dieser spezifischen Lösungen in CAD. Der Fokus der Entwicklung lag zunächst auf dem Fahrgestell, gefolgt vom Aufbau darauf. Der Entwicklungsprozess umfasste die Konstruktion einer Trägerstange zur Montage eines Getriebes, eines Gehäuses für die Motoren, eines Akkus sowie sämtlicher Steuerelemente. Des Weiteren wurde ein Sitz entworfen, der mit einem 5-Punkt-Sicherheitsgurt, einem Bedienpanel an der rechten Armlehne sowie einer Fußablage bzw. -stütze ausgestattet ist. Parallel dazu wurde ein CAD-Modell der Treppe erstellt, um ein besseres räumliches Verständnis für die benötigten Proportionen zu erlangen.
+
+Um eine universelle Anwendung für Personen unterschiedlicher Körpergrößen zu gewährleisten, wurden durchschnittliche Standardmaße zugrunde gelegt. Die Probanden waren im Durchschnitt 1,80 Meter groß, hatten eine Unterschenkellänge von 42 Zentimetern und eine Ellbogenhöhe über der Sitzfläche von 26 Zentimetern. Im weiteren Verlauf wurden die Raupen, auf denen der Fahrmechanismus basiert, hinzugefügt. In einem letzten Schritt wurde der Mechanismus für die Winkeländerung des Sitzes in Bezug zur Plattform konstruiert und in CAD umgesetzt. Des Weiteren wurden Motoren integriert, welche die Größenverhältnisse und den verfügbaren Raum für weitere Einbauten veranschaulichen sollen. Zum Abschluss wurde ein Korb integriert, welcher den Transport von Rucksäcken, Taschen oder Beatmungsgeräten erleichtern soll.
+
+Nach Abschluss des CAD-Konstruktionsprozesses erfolgte die Materialauswahl bzw. -zuweisung im CAD. Für den Sitz wurde pflegeleichtes Kunstleder gewählt, während die tragenden Teile des Mechanismus aus rostfreiem Edelstahl gefertigt werden. Die Raupen bestehen aus Gummi, um einen maximalen Grip zu gewährleisten. Zur Veranschaulichung des erstellten Modells wurden Renderings sowohl des Treppen- als auch des Sitzbereichs erstellt.
+\subsubsection{Problemstellungen}
+Während der Bearbeitung traten lediglich wenige unerwartete Herausforderungen auf, die jedoch ohne größere Schwierigkeiten bewältigt werden konnten. Die Hauptproblematik, die sich im Rahmen einer umfassenden Überprüfung als relevant herausstellte, war die Bewältigung der sich während der Fahrt verändernden Schwerpunktlage. Die Lösung des Problems erfolgte durch die Möglichkeit, den Sitz-Winkel entsprechend anzupassen. Dennoch ist es empfehlenswert, den Schwerpunkt des Fahrzeugs so niedrig wie möglich zu halten, um eine optimale Stabilität und Funktionalität zu gewährleisten. Ebenfalls ist es von essentieller Bedeutung, ausreichend Platz für Bremsen, Sicherheitseinrichtungen und potenzielle zusätzliche Halterungen zu berücksichtigen.
+\subsubsection{Resümee}
+Die vorliegende Ausarbeitung stellt für das spezielle Modell beziehungsweise diese spezifische Lösung aus unserer Sicht den optimalen Ansatz für die vorliegende Problemstellung dar. Dies wurde bereits im Verlauf der Arbeit beschrieben. Das Fahrzeug eignet sich in idealer Weise für einen sicheren und reibungslosen Transport körperlich eingeschränkter Personen über die beschriebenen Treppen. Darüber hinaus bietet unser Vorschlag eine Vielzahl an Varianten, die ihn zu einem exzellenten Einstiegsprojekt in ein Biomedical Engineering-Semester machen.
+
+\section{Anhang}
+\subsection{Erklärung}
+Wir versichern, dass die vorliegende Studienarbeit eigenständig verfasst wurde und sämtliche Hilfsmittel und Quellen, die bei der Erstellung verwendet wurden, korrekt angegeben sind.
+
+\vspace{0.5cm}
+
+\begin{tabbing}
+    \hspace{5cm} \= \hspace{3cm} \= \kill
+    Name: Janis Graf \> Datum: 20.04.2024 \> Unterschrift: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\[0.5cm]
+    Name: Philipp Baumann \> Datum: 20.04.2024 \> Unterschrift: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\[0.5cm]
+    Name: Jonas Frosch \> Datum: 20.04.2024 \> Unterschrift: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ \\[0.5cm]
+    Name: Raoul Pietschmann \> Datum: 20.04.2024 \> Unterschrift: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\end{tabbing}
+\subsection{Quellen}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
