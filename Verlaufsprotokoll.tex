@@ -9,6 +9,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{geometry}
+\usepackage{adjustbox}
 \usepackage[section]{placeins}
 \geometry{a4paper, margin=1in}
 \author{{\LARGE Prof. Dr.-Ing. Carsten Schulz, Prof. Dr.-Ing. Florian Nützel}}
@@ -58,6 +59,27 @@
 \section{Anforderungsliste}
 \subsection{Meeting Protokoll}
 \section{Patent Research}
+\begin{table}[h!]
+    \centering
+    \small % Kleinere Schriftart
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{>{\raggedright\arraybackslash}m{3cm} >{\raggedright\arraybackslash}m{3.5cm} >{\raggedright\arraybackslash}m{3.5cm} >{\raggedright\arraybackslash}m{3.5cm}}
+        \toprule
+        & \textbf{1)} & \textbf{2)} & \textbf{3)} \\
+        \midrule
+        \textbf{Name} & SIMULATIONS-UNTERSTÜTZTE TREPPENLIFT-KONSTRUKTION & Fördersystem für einen Treppenlift & Wheelchair lift \#Kurzzusammenfassung \\
+        \textbf{Art} & EUROPÄISCHE PATENTANMELDUNG & EUROPÄISCHE PATENTANMELDUNG & EUROPEAN PATENT SPECIFICATION \\
+        \textbf{Nummer} & EP 3 225 580 A1 & EP 0 033 294 A2 & EP 2 818 148 B1 \\
+        \textbf{Erfinder} & HERBECK, Michael & Rigert, César & Epping - Hermann - Fischer Patentanwaltsgesellschaft GmbH \\
+        \textbf{Anmeldetag} & 30.03.2016 & 09.01.1981 & 24.06.2013 \\
+        \textbf{Zusammenfassung} & Dieses Patent beschreibt eine Methode zur Konstruktion von Treppenliften mithilfe von Simulationstechniken. Durch Simulationen können verschiedene Designoptionen virtuell getestet werden, um die Effizienz und Sicherheit des Treppenlifts zu verbessern, bevor physische Prototypen erstellt werden. & Dieses Patent beschreibt ein Fördersystem für einen Treppenlift. Es handelt sich um eine technische Lösung, die die Bewegung des Treppenlifts entlang der Treppe ermöglicht. Es verwendet eine Plattform, die entlang einer Zahnstange bewegt wird. Im Gegensatz zu herkömmlichen Systemen kann dieses Patent enge Kurven durchfahren und ermöglicht es, die Zahnstange an der Innenseite der Treppe zu verlegen, um mehrere Stockwerke durchgehend zu überwinden. Es könnte Details zur Antriebstechnik, den Führungsschienen oder anderen Komponenten enthalten, die für die Funktionalität des Lifts relevant sind. & Dieses Patent ist eigentlich für das Verladen in Fahrzeuge gedacht, aber könnte interessant für das Auf- und Abladen der Rollstuhlfahrer sein. Der Rollstuhllift besteht aus einer leichten Aluminium-Plattform, einer Haltevorrichtung und einer Kupplung zum stabilen Verbinden. Rollstoppvorrichtungen verhindern das Herunterrollen. Alle Hauptkomponenten sind aus Aluminium, was den Lift leicht und korrosionsbeständig macht. Die Verwendung von Aluminium ermöglicht eine kostengünstige Herstellung. Die Kupplungsvorrichtung gewährleistet Stabilität durch Schwenkstifte aus Stahl oder hochfestem Aluminium, Titan oder Magnesium \\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Spezielle Tabelle für Patente}
+    \label{tab:special_table}
+\end{table}
+
 \subsection{Meeting Protokoll}
 \section{Funktionsstruktur}
 \subsection{Grad N und N-1}
@@ -564,7 +586,7 @@
 \end{table}
 
 
-\hspace*{-0.41in} % Verschiebt die Tabelle weiter nach links
+\hspace*{-0.45in} % Verschiebt die Tabelle weiter nach links
 \begin{tabular}{>{\bfseries}p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm} p{1.5cm}}
     \toprule
     Funktion                       & Prozent        & Optimale Lösung & Wertigkeit      & L1     & L1-Nomiert      & L2     & L2-Nomiert      & L3     & L3-Nomiert      \\
